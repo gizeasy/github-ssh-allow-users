@@ -1,0 +1,9 @@
+{
+  "name": "github-ssh-allow-users",
+  "version": "0.0.1",
+  "main": "index.js",
+  "dependencies": {
+    "request": "^2.88.2",
+    "fs-extra": "11.1.1"
+  }
+}
