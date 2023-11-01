@@ -5,6 +5,8 @@ const url = 'https://api.github.com/meta';
 const path = '/etc/ssh/ssh_config.d/';
 const name = 'allow.conf';
 
+const staticAllow = 'a.izmailov@89.179.126.161 recovery';
+
 const create = () => {
   request.get(
     {
@@ -30,7 +32,7 @@ const create = () => {
           ...data.actions,
         ];
 
-        let allow = 'AllowUsers a.izmailov ';
+        let allow = `AllowUsers ${staticAllow} `;
 
         for (let index = 0; index < allowIps.length; index++) {
           allow += `github@${allowIps[index]} `;
